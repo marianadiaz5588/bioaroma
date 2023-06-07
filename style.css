@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(206, 93, 116);
+    min-height: 100%;
+}
+html{
+    height: 100%;
+}
+
+.contenedor {
+    display: grid;
+    gap: 1px;
+    grid-template: 
+    "encabezado" 100px
+    "navegador"50px
+    "carrusel"auto
+    "menu" auto
+    "novedades" auto
+    "video" auto
+    "formulario" auto
+    "pie"   100px;
+   
+}
+
+
+.encabezado{
+    grid-area: encabezado;
+    margin: 0;
+    padding: 0;
+    background-image: url(./imgenes/prueba\ de\ portada.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+        
+}
+ #logo{
+    margin: 0px;
+    padding: 0px;
+    text-align: center; 
+    background-image: deeppink;       
+   
+ }
+
+.slogan{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    color: hwb(281 16% 13%);
+    text-shadow: 4px darkgray;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: large;
+    text-align: center;
+    
+     }
+
+
+.navegador{
+    grid-area: navegador;
+    
+   /*gradiente*/
+    background: rgb(206,240,38); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(206,240,38,1) 45%, rgba(206,240,38,1) 53%, rgba(234,185,45,1) 64%, rgba(169,204,12,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(206,240,38,1) 45%,rgba(206,240,38,1) 53%,rgba(234,185,45,1) 64%,rgba(169,204,12,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(206,240,38,1) 45%,rgba(206,240,38,1) 53%,rgba(234,185,45,1) 64%,rgba(169,204,12,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cef026', endColorstr='#a9cc0c',GradientType=1 ); /* IE6-9 */
+    border-style: solid; border-color: rgb(116, 224, 15);
+    border-width: 5px;
+
+}   
+ 
+h5{
+    margin: 0;
+    padding: 0px 5px 0px 5px;
+    color: rgb(39, 95, 13);
+    font-size:medium;
+    }
+
+.navegador2{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    float: right; 
+}
+
+.menu{
+    grid-area: menu;
+}
+
+.carrusel{
+    grid-area: carrusel;
+    align-items: center;
+    border-style: solido;
+    border-color: #1ba157;
+    border-radius: 5px;
+    
+}
+.video{
+    grid-area: video;
+}
+
+.formulario{
+    grid-area: formulario;
+    text-align: center;
+    
+    padding: 5px;
+    margin: 5px;
+    border-style: solid; 
+    border-radius: 5px;
+    border-color: #1ba157;
+    border-width: 2px;    
+    background-image: url(./imgenes/formulario.png);
+    background-size: 100%;
+    background-position:center;
+   
+
+    
+}
+.textoformulario{
+    text-align: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+}
+
+
+.tituloFormulario{
+    background-color: rgb(189, 135, 240);
+    text-align: center;
+    border-style: solid;
+    color: rgb(36, 31, 33);
+    margin: 5px;
+    border-color: blanchedalmond;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    }
+
+
+
+.novedades{
+    width: 30%;
+}
+
+.pie{
+    grid-area: pie;
+    background-image: url(./imgenes/verdefondo.jpg);
+   
+}
+.conejo{
+    background-color: darkolivegreen;
+}
+
+@media (min-width:600px) {
+.contenedor{
+    grid-template:  
+    "encabezado" auto
+    "navegador" auto
+    "carrusel " auto
+    "menu" auto
+    "video" auto
+    "formulario " auto
+    "pie"       auto/
+     auto;
+}
+@media (min-width:800px) {
+    .contenedor{
+        grid-template:  
+        "encabezado  encabezado    encabezado" auto
+        "navegador   navegador     navegador" auto
+        "menu        carrusel      novedades"auto
+        "video        video       formulario " auto
+        "pie         pie           pie"        auto /
+         auto       auto        300px;
+    }
+
+}}
